@@ -23,10 +23,23 @@ int print_s(va_list ptr)
 	int i = 0;
 	char *str = va_arg(ptr, char *);
 
-	while (str != NULL && str[i])
+	if (!str)
 	{
-		_putchar(str[i]);
-		i++;
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+		return(6);
+	}
+	else
+	{
+		while (str != NULL && str[i])
+		{
+			_putchar(str[i]);
+			i++;
+		}
 	}
 	return (i);
 }

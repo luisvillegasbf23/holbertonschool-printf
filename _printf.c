@@ -32,15 +32,6 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			if (data[j].lett[0] == '\0')
-			{
-				_putchar('(');
-				_putchar('n');
-				_putchar('u');
-				_putchar('l');
-				_putchar('l');
-				_putchar(')');
-			}
 			i++; /* add 1 to i, to not print lett*/
 		}
 		else
