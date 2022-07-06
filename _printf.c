@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 /**
 * _printf -
 * @format:
@@ -8,47 +7,24 @@
 
 int _printf(const char *format, ...)
 {
-	int lenstr;
+	int i = 0, j = 0;
 	va_list ptr;
-	
-	va_start(ptr, format);
-	while (format != NULL && format[i] != '\0')
-		if (format[i] == '%')
-		{
-			switch(format[i + 1])
-			{
-				case 'c':
-					// print a character
-					break;
-				case 's':
-					// print a string
-					break;
-				case 'd':
-					// print decimal
-					break;
-				case 'i':
-					// print integer
-					break;
-			}
-		}
 
-	lenstr = printstring(format);
-	return (lenstr);
-}
+	pf data[] = {
+		{"c", print_c},
+		{"s", print_s},
+		{"%", print_percent},
+	};
 
-/**
-* printstring -
-* @str:
-* Return:
-*/
-int printstring(const char *str)
-{
-	int i = 0;
-	
-	while (str != NULL && str[i] != '\0')
+	while (formart != NULL && format[i])
 	{
-		_putchar(str[i]);
+		if (fotmat[i] == '%')
+		{
+			while ()
+		}
+		_putchar(format[i]);
 		i++;
 	}
-	return (i - 1);
+	return ();
 }
+
