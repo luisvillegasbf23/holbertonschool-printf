@@ -18,7 +18,7 @@ int _putchar(char c)
 * @str:
 * Return:
 */
-int print_string(const char *str)
+int print_s(char *str)
 {
 	int i = 0;
 
@@ -27,5 +27,5 @@ int print_string(const char *str)
 		_putchar(str[i]);
 		i++;
 	}
-	return (i - 1);
+	return (0);
 }
