@@ -11,7 +11,7 @@
 typedef struct print_format
 {
   char *lett;
-  int (*f)(va_list par);
+  int (*f)(va_list prt);
 } pf;
 
 /* fuctions to _printf */

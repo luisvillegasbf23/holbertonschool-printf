@@ -18,13 +18,16 @@ int _printf(const char *format, ...)
 
 	while (formart != NULL && format[i])
 	{
-		if (fotmat[i] == '%')
+		if (format[i] == '%')
 		{
-			while ()
+			while (data[j].lett == format[i + 1])
+			{
+				data[j].f;
+			}
 		}
 		_putchar(format[i]);
 		i++;
 	}
-	return ();
+	return (0);
 }
 
