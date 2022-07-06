@@ -17,5 +17,5 @@ typedef struct print_format
 /* fuctions to _printf */
 int _putchar(char c);
 int _printf(const char *format, ...);
-int printstring(const char *str);
+int print_s(va_list ptr);
 #endif

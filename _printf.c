@@ -20,9 +20,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			while (data[j].lett == format[i + 1])
+			while (data[j].lett)
 			{
-				data[j].f;
+				if (data[j].lett == format[i + 1])
+					data[j].f;
+				j++;
 			}
 		}
 		_putchar(format[i]);
