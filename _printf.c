@@ -7,7 +7,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, count = 0;
 	va_list ptr;
 
 	pf data[] = {
@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			{
 				if (data[j].lett[0] == format[i + 1])
 				{
-					(data[j].f)(ptr);
+					count += (data[j].f)(ptr);
 					break;
 				}
 				j++;
@@ -37,10 +37,11 @@ int _printf(const char *format, ...)
 		else
 		{
 			_putchar(format[i]);
+			count++;
 		}
 		i++;
 	}
 	va_end(ptr);
-	return (0);
+	return (count - 1);
 }
 

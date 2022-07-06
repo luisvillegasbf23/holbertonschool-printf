@@ -28,7 +28,7 @@ int print_s(va_list ptr)
 		_putchar(str[i]);
 		i++;
 	}
-	return (0);
+	return (i);
 }
 
 /**
@@ -41,7 +41,7 @@ int print_c(va_list ptr)
 	char c = va_arg(ptr, int);
 
 	_putchar(c);
-	return (0);
+	return (1);
 }
 /**
 * print_percent - this function print a percent
@@ -53,5 +53,5 @@ int print_percent(va_list ptr)
 	char per = va_arg(ptr, int);
 
 	_putchar(per);
-	return (0);
+	return (1);
 }
