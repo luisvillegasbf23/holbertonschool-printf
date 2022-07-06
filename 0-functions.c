@@ -61,7 +61,7 @@ int print_c(va_list ptr)
 * @ptr: va list name
 * Return: ALways 0
 */
-int print_percent()
+int print_percent(__attribute__((unused)) va_list ptr)
 {
 	_putchar('%');
 	return (1);
