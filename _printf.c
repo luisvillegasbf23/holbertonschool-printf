@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			if (data[j].lett[0] == NULL)
+			if (data[j].lett[0] == '\0')
 			{
 				_putchar('(');
 				_putchar('n');
