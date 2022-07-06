@@ -6,12 +6,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <stdarg.h>
 
 /* this struct calls functions */
 typedef struct print_format
 {
   char *lett;
-  int (*f)(va_list prt);
+  int (*f)(va_list ptr);
 } pf;
 
 /* fuctions to _printf */

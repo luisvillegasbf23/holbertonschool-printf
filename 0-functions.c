@@ -18,11 +18,12 @@ int _putchar(char c)
 * @str:
 * Return:
 */
-int print_s(char *str)
+int print_s(va_list ptr)
 {
 	int i = 0;
+	char *str = va_arg(ptr, char *);
 
-	while (str != NULL && str[i] != '\0')
+	while (str != NULL && str[i])
 	{
 		_putchar(str[i]);
 		i++;

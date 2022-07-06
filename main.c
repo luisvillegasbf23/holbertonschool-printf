@@ -11,6 +11,6 @@ int main(void)
 {
 	char *h = "hola";
 
-	_printf("%s", h);
+	_printf("jajas %s\n", h);
 	return (0);
 }

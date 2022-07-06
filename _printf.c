@@ -11,25 +11,30 @@ int _printf(const char *format, ...)
 	va_list ptr;
 
 	pf data[] = {
-		{"c", print_c},
 		{"s", print_s},
-		{"%", print_percent},
+		{NULL, NULL},
 	};
 
-	while (formart != NULL && format[i])
+	va_start(ptr, format);
+	while (format != NULL && format[i])
 	{
 		if (format[i] == '%')
 		{
 			while (data[j].lett)
 			{
-				if (data[j].lett == format[i + 1])
-					data[j].f;
+				if (data[j].lett[0] == format[i + 1])
+					(data[j].f)(ptr);
 				j++;
 			}
+			i++;
 		}
-		_putchar(format[i]);
+		else
+		{
+			_putchar(format[i]);
+		}
 		i++;
 	}
+	va_end(ptr);
 	return (0);
 }
 
