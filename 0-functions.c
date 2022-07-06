@@ -1,4 +1,4 @@
-#include "main.h"
+-Wall -Werror -Wextra -pedantic -std=gnu89 *.cinclude "main.h"
 /* contains all functions to use */
 
 /**
@@ -28,7 +28,7 @@ int print_s(va_list ptr)
 		_putchar(str[i]);
 		i++;
 	}
-	return (i);
+	return (i - 1);
 }
 
 /**
@@ -39,9 +39,10 @@ int print_s(va_list ptr)
 int print_c(va_list ptr)
 {
 	char c = va_arg(ptr, int);
+	int n = 1;
 
 	_putchar(c);
-	return (1);
+	return (n);
 }
 /**
 * print_percent - this function print a percent
@@ -51,7 +52,7 @@ int print_c(va_list ptr)
 int print_percent(va_list ptr)
 {
 	char per = va_arg(ptr, int);
-
+	int a = 1;
 	_putchar(per);
-	return (1);
+	return (a);
 }
