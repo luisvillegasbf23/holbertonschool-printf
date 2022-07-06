@@ -63,8 +63,6 @@ int print_c(va_list ptr)
 */
 int print_percent(va_list ptr)
 {
-	char per = va_arg(ptr, int);
-	
-	_putchar(per);
+	_putchar('%');
 	return (1);
 }
