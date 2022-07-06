@@ -61,7 +61,7 @@ int print_c(va_list ptr)
 * @ptr: va list name
 * Return: ALways 0
 */
-int print_percent(va_list ptr)
+int print_percent()
 {
 	_putchar('%');
 	return (1);
