@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-* _printf -
-* @format:
+* _printf - prints format
+* @format: variadic function
 * Return: lenght of format
 */
 
@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 
 	pf data[] = {
 		{"s", print_s},
+		{"c", print_c},
+		{"%", print_percent},
 		{NULL, NULL},
 	};
 
@@ -20,13 +22,17 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			j = 0; /* set to 0 before search for a lett*/
 			while (data[j].lett)
 			{
 				if (data[j].lett[0] == format[i + 1])
+				{
 					(data[j].f)(ptr);
+					break;
+				}
 				j++;
 			}
-			i++;
+			i++; /* add 1 to i, to not print lett*/
 		}
 		else
 		{

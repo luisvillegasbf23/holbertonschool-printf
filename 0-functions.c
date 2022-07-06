@@ -4,19 +4,19 @@
 /**
 * _putchar - writes the character c to stdout
 * @c: The character to print
-*
 * Return: On success 1.
 * On error, -1 is returned, and errno is set appropriately.
 */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
 
 /**
-* print_string - this function print strings
-* @str:
-* Return:
+* print_s - this function print strings
+* @ptr: va_list name
+* Return: Always 0
 */
 int print_s(va_list ptr)
 {
@@ -28,5 +28,30 @@ int print_s(va_list ptr)
 		_putchar(str[i]);
 		i++;
 	}
+	return (0);
+}
+
+/**
+* print_c - this function print characters
+* @ptr: va list name
+* Return: ALways 0
+*/
+int print_c(va_list ptr)
+{
+	char c = va_arg(ptr, int);
+
+	_putchar(c);
+	return (0);
+}
+/**
+* print_percent - this function print a percent
+* @ptr: va list name
+* Return: ALways 0
+*/
+int print_percent(va_list ptr)
+{
+	char per = va_arg(ptr, int);
+
+	_putchar(per);
 	return (0);
 }
