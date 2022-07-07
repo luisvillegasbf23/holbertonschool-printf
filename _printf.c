@@ -40,7 +40,10 @@ int _printf(const char *format, ...)
 				flag = 0;
 			}
 			else 
+			{
 				_putchar('%');
+				count += 1;
+			}
 		}
 		else
 		{
@@ -50,6 +53,7 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(ptr);
+	printf("%d\n", count);
 	return (count);
 }
 
