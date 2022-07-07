@@ -50,8 +50,11 @@ int _printf(const char *format, ...)
 				return (-1);
 			aux_count = count;
 			count += get_function(format[i + 1], ptr);
-			if (count != aux_count || aux_count == (count - 1))
+			if (count != aux_count)
+			{
+				if(aux_count == (count - 1))
 				flag = 1;
+			}
 			if (flag)
 			{
 				i++; /* add 1 to i, to not print lett*/
