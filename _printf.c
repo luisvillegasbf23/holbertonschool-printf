@@ -1,4 +1,32 @@
 #include "main.h"
+
+/**
+* get_function - get the function
+* @c: format
+* @ptr: va list name
+* Return: int
+*/
+int get_function(char c, va_list ptr)
+{
+	int j = 0; /* set to 0 before search for a lett*/
+
+	pf data[] = {
+		{"s", print_s},
+		{"c", print_c},
+		{"%", print_percent},
+		{NULL, NULL},
+	};
+
+	while (data[j].lett)
+	{
+		if (data[j].lett[0] == c)
+		{
+			return ((data[j].f)(ptr));
+		}
+		j++;
+	}
+}
+
 /**
 * _printf - prints format
 * @format: variadic function
@@ -10,12 +38,6 @@ int _printf(const char *format, ...)
 	int i = 0, j = 0, count = 0, flag = 0;
 	va_list ptr;
 
-	pf data[] = {
-		{"s", print_s},
-		{"c", print_c},
-		{"%", print_percent},
-		{NULL, NULL},
-	};
 	if (format == NULL)
 		return (-1);
 	va_start(ptr, format);
@@ -25,23 +47,14 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			j = 0; /* set to 0 before search for a lett*/
-			while (data[j].lett)
-			{
-				if (data[j].lett[0] == format[i + 1])
-				{
-					count += (data[j].f)(ptr);
-					flag = 1;
-					break;
-				}
-				j++;
-			}
+			count += get_function(format[i + 1], va_list ptr);
+			flag = 1;
 			if (flag)
 			{
 				i++; /* add 1 to i, to not print lett*/
 				flag = 0;
 			}
-			else 
+			else
 			{
 				_putchar('%');
 				count += 1;
