@@ -52,11 +52,8 @@ int _printf(const char *format, ...)
 			count += get_function(format[i + 1], ptr);
 			if (aux_count != count)
 			{
-				if (aux_count == (count - 1))
-				{
+				if (aux_count != (count - 1))
 					count++;
-					flag = 1;
-				}
 				flag = 1;
 			}
 			if (flag)
