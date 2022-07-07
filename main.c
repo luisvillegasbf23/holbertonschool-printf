@@ -11,7 +11,7 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%K\n");
+	len = _printf("%");
 	fflush(stdout);
 	if (len != len2)
 	{
