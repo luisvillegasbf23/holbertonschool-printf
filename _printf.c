@@ -25,6 +25,7 @@ int get_function(char c, va_list ptr)
 		}
 		j++;
 	}
+	return (0);
 }
 
 /**
@@ -35,7 +36,7 @@ int get_function(char c, va_list ptr)
 
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0, count = 0, flag = 0;
+	int i = 0, count = 0, flag = 0;
 	va_list ptr;
 
 	if (format == NULL)
@@ -47,7 +48,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			count += get_function(format[i + 1], va_list ptr);
+			count += get_function(format[i + 1], ptr);
 			flag = 1;
 			if (flag)
 			{
