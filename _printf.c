@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 				return (-1);
 			aux_count = count;
 			count += get_function(format[i + 1], ptr);
-			if (count != aux_count)
+			if (count != aux_count || aux_count == (count - 1))
 				flag = 1;
 			if (flag)
 			{
