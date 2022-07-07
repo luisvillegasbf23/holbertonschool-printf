@@ -4,10 +4,9 @@
 * @format: variadic function
 * Return: lenght of format
 */
-
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0, count = 0, flag = 0;
+	int i = 0, j = 0, count = 0, flag = 0, aux = 0;
 	va_list ptr;
 
 	pf data[] = {{"s", print_s}, {"c", print_c}, {"%", print_percent},
@@ -22,7 +21,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-			j = 0; /* set to 0 before search for a lett*/
+			j = 0;/* set to 0 before search for a lett*/
 			while (data[j].lett)
 			{
 				if (data[j].lett[0] == format[i + 1])
