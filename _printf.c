@@ -7,7 +7,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0, count = 0;
+	int i = 0, j = 0, count = 0, flag = 0;
 	va_list ptr;
 
 	pf data[] = {
@@ -16,7 +16,8 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{NULL, NULL},
 	};
-
+	if (format == NULL)
+		return (-1);
 	va_start(ptr, format);
 	while (format != NULL && format[i])
 	{
@@ -28,11 +29,18 @@ int _printf(const char *format, ...)
 				if (data[j].lett[0] == format[i + 1])
 				{
 					count += (data[j].f)(ptr);
+					flag = 1;
 					break;
 				}
 				j++;
 			}
-			i++; /* add 1 to i, to not print lett*/
+			if (flag)
+			{
+				i++; /* add 1 to i, to not print lett*/
+				flag = 0;
+			}
+			else 
+				_putchar('%');
 		}
 		else
 		{
