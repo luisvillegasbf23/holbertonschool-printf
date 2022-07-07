@@ -36,7 +36,7 @@ int get_function(char c, va_list ptr)
 
 int _printf(const char *format, ...)
 {
-	int i = 0, count = 0, flag = 0;
+	int i = 0, count = 0, flag = 0, aux_count = 0;
 	va_list ptr;
 
 	if (format == NULL)
@@ -48,8 +48,10 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
+			aux_count = count;
 			count += get_function(format[i + 1], ptr);
-			flag = 1;
+			if (count != count_aux)
+				flag = 1;
 			if (flag)
 			{
 				i++; /* add 1 to i, to not print lett*/
