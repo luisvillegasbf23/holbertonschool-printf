@@ -53,6 +53,7 @@ int _printf(const char *format, ...)
 			if (count != aux_count)
 			{
 				if(aux_count == (count - 1))
+					count++;
 				flag = 1;
 			}
 			if (flag)
