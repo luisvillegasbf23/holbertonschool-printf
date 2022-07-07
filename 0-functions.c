@@ -33,10 +33,6 @@ int print_s(va_list ptr)
 		_putchar(')');
 		return (6);
 	}
-	else if (str[0] == '\0')
-	{
-		return (-1);
-	}
 	else
 	{
 		while (str != NULL && str[i])
