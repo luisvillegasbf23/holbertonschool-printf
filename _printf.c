@@ -6,7 +6,7 @@
 */
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0, count = 0, flag = 0, aux = 0;
+	int i = 0, j = 0, count = 0, flag = 0;
 	va_list ptr;
 
 	pf data[] = {{"s", print_s}, {"c", print_c}, {"%", print_percent},
