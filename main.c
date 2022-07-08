@@ -9,15 +9,9 @@
  */
 int main(void)
 {
-	int len, len2;
-
-	len = _printf("%");
-	fflush(stdout);
-	if (len != len2)
-	{
-		printf("Lengths differ.\n");
-		fflush(stdout);
-		return (1);
-	}
+	_printf("positivo %d\n", 5);
+	_printf("cero %d\n", 0);
+	_printf("negativo %d\n", -2);
+	_printf("numero largo %d\n", 1536);
 	return (0);
 }

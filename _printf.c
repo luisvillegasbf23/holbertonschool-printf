@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list ptr;
 
 	pf data[] = {{"s", print_s}, {"c", print_c}, {"%", print_percent},
-		{NULL, NULL},
+		{"d", print_num}, {"i", print_num}, {NULL, NULL},
 	};
 	if (format == NULL)
 		return (-1);

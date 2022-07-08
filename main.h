@@ -24,4 +24,5 @@ int _printf(const char *format, ...);
 int print_s(va_list ptr);
 int print_c(va_list ptr);
 int print_percent(va_list ptr);
+int print_num(va_list ptr);
 #endif

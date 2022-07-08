@@ -66,3 +66,35 @@ int print_percent(__attribute__((unused)) va_list ptr)
 	_putchar('%');
 	return (1);
 }
+
+/**
+* print_d
+* @ptr:
+* Return: int
+*/
+int print_num(va_list ptr)
+{
+	int num = va_arg(ptr, int);
+	int i = 1, div = 0, rev = 0;
+
+	if (num < 0)
+	{
+		num = num * (-1);
+		_putchar('-');
+	}
+	if (num >= 0 && num <= 9)
+	{
+		_putchar(num + 48);
+		return(1);
+	}
+	while(num / i)
+	{
+		div = (num / i);
+		rev = ((div % 10) + 48);
+		_putchar(rev);
+		i = i * 10;
+	}
+	if (!(num / i))
+		_putchar('h');
+	return (0);
+}
