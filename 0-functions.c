@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <string.h>
 /* contains all functions to use */
 
 /**
@@ -99,6 +97,5 @@ int print_num(va_list ptr)
 		count++;
 	}
 	str[i] = '\0'; /* add null value to the last position*/
-	printf("\n%d\n", count);
 	return (count);
 }
