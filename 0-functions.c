@@ -76,7 +76,12 @@ int print_num(va_list ptr)
 {
 	int num = va_arg(ptr, int);
 	int count = 0, numcpy = 0, numprint = 0, d = 0, i = 1;
-
+	
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 	if (num < 0)
 	{
 		numcpy = num * (-1);
@@ -97,7 +102,7 @@ int print_num(va_list ptr)
 	while(d >= 1)
 	{
 		numprint = numcpy / d;
-		_putchar(numprint + 48);
+		_putchar(numprint + '0');
 		numcpy = (numcpy - (d * numprint));
 		d = d / 10;
 		count++;
