@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <string.h>
 /* contains all functions to use */
 
 /**
@@ -75,8 +77,8 @@ int print_percent(__attribute__((unused)) va_list ptr)
 int print_num(va_list ptr)
 {
 	int num = va_arg(ptr, int);
-	int i = 1, div = 0, rev = 0;
-
+	int strlenght = 0, i = 0;
+	char str[30];
 	if (num < 0)
 	{
 		num = num * (-1);
@@ -87,14 +89,13 @@ int print_num(va_list ptr)
 		_putchar(num + 48);
 		return(1);
 	}
-	while(num / i)
+	sprintf(str, "%d", num); /* convert num into string*/
+	while (str != NULL && str[i])
 	{
-		div = (num / i);
-		rev = ((div % 10) + 48);
-		_putchar(rev);
-		i = i * 10;
+		 _putchar(str[i]);
+		i++;
 	}
-	if (!(num / i))
-		_putchar('h');
-	return (0);
+	str[i] = '\0'; /* add null value to the last position*/
+	strlenght = strlen(str);
+	return (strlenght);
 }
