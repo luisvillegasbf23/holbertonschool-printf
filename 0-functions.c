@@ -77,12 +77,14 @@ int print_num(va_list ptr)
 	int num = va_arg(ptr, int);
 	int i = 0, count = 0;
 	char str[30];
+	/**
 	if (num < 0)
 	{
 		num = num * (-1);
 		_putchar('-');
 		count += 1;
 	}
+	**/
 	if (num >= 0 && num <= 9)
 	{
 		_putchar(num + 48);
