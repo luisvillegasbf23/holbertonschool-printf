@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /* contains all functions to use */
 
 /**
@@ -76,8 +75,15 @@ int print_percent(__attribute__((unused)) va_list ptr)
 int print_num(va_list ptr)
 {
 	int num = va_arg(ptr, int);
-	int count = 0, numcpy = 0, numprint = 0, d = 0;
+	int count = 0;
+	unsigned int numcpy, numprint, d;
 	double i = 1;
+	
+	if (num == 0)
+	{
+		_putchar('0');
+		return(1);
+	}
 	if (num < 0)
 	{
 		numcpy = num * (-1);
