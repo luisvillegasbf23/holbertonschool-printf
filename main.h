@@ -6,6 +6,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <math.h>
 /**
 * struct print_format - this struct calls functions
 * @lett: format to print
