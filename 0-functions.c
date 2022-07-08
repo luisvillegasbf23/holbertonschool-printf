@@ -75,21 +75,32 @@ int print_percent(__attribute__((unused)) va_list ptr)
 int print_num(va_list ptr)
 {
 	int num = va_arg(ptr, int);
-	int i = 0, count = 0;
-	char str[30];
-	if (num >= 0 && num <= 9)
+	int count = 0, numcpy = 0, numprint = 0, d = 0, i = 1;
+
+	if (num < 0)
 	{
-		_putchar(num + 48);
-		count += 1;
-		return(count);
-	}
-	sprintf(str, "%d", num); /* convert num into string*/
-	while (str != NULL && str[i])
-	{
-		 _putchar(str[i]);
-		i++;
+		numcpy = num * (-1);
+		_putchar('-');
 		count++;
 	}
-	str[i] = '\0'; /* add null value to the last position*/
+	else
+	{
+		numcpy = num;
+	}
+	while(i <= numcpy)
+	{
+		i = i * 10;
+	}
+	
+	d = i / 10;
+	
+	while(d >= 1)
+	{
+		numprint = numcpy / d;
+		_putchar(numprint + 48);
+		numcpy = (numcpy - (d * numprint));
+		d = d / 10;
+		count++;
+	}
 	return (count);
 }
