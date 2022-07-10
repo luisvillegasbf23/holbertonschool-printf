@@ -9,7 +9,7 @@ In the following project we were recreating our own printf and only took as a ca
 - C language compiler [gcc](https://gcc.gnu.org/).
 
 ## FLOWCHART
-This was our [flowchart]() to create _printf.
+![printf flowchart drawio](https://user-images.githubusercontent.com/105667854/178156784-66c7212f-da3e-4acd-8b08-0db1a766b07a.png)
 
 ## HOW TO USE _PRINTF 
 If you want to know more about how our function works here is the [man _printf](https://gleaming-particle-89c.notion.site/man-_printf-3-3c76fc87e5bc4d8d882118c8b9200392).
