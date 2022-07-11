@@ -11,9 +11,7 @@ In the following project we were recreating our own printf and only took as a ca
 ## FLOWCHART
 ![Flowchart](https://user-images.githubusercontent.com/105667854/178328804-5365926c-510c-45a5-8673-d365b2f74d9c.png)
 
-
-# man _printf
-
+# Printf
 ## Name
 	_printf - formatted output conversion
 
