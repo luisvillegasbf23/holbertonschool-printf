@@ -13,7 +13,7 @@ In the following project we were recreating our own printf and only took as a ca
 
 # Printf
 ## Name
-	_printf - formatted output conversion
+_printf - formatted output conversion
 
 ## SYNOPSIS
 
