@@ -1,3 +1,17 @@
+# My Own Printf
+Many programming languages implement a printf function (print formatted), to display a formatted string. This one, originally from the C programming language (If you don't know what we are talking about here is the man printf(3).
+
+In the following project we were recreating our own printf and only took as a case the most used formats (mentioned in the man).
+
+## REQUIREMENTS
+ - Have a text editor
+ - Clone repository in your console.
+ - C language compiler gcc.
+
+## FLOWCHART
+![Flowchart](https://user-images.githubusercontent.com/105667854/178328804-5365926c-510c-45a5-8673-d365b2f74d9c.png)
+
+
 # man _printf
 
 ## Name
