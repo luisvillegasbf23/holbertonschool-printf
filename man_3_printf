@@ -1,0 +1,27 @@
+.TH _PRINTF
+.SH NAME
+_printf - formatted output conversion
+.SH SYNOPSIS
+int _printf(const char *format, ...);
+.SH DESCRIPTION
+The _printf (print formatted) function prints on the screen a string replacing special marks acording to format.
+.PP
+Receives a variable number of special marks and replaces them with the arguments passed in.
+.PP
+Special Marks are:
+
+%c	prints character
+
+%s	prints string
+
+%%	prints percentage
+
+%d	prints decimal
+
+%i	prints integer
+.SH RETURN VALUE
+Returns the number of characters printed.
+
+If an output error is encountered, a negative value is returned.
+.SH AUTHOR
+  Written by Luis Villegas and Santiago Fernandez
