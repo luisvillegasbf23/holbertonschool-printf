@@ -68,8 +68,8 @@ int print_percent(__attribute__((unused)) va_list ptr)
 }
 
 /**
-* print_d
-* @ptr:
+* print_num - print int and decimal
+* @ptr: arg
 * Return: int
 */
 int print_num(va_list ptr)
@@ -78,11 +78,11 @@ int print_num(va_list ptr)
 	int count = 0;
 	unsigned int numcpy, numprint, d;
 	double i = 1;
-	
+
 	if (num == 0)
 	{
 		_putchar('0');
-		return(1);
+		return (1);
 	}
 	if (num < 0)
 	{
@@ -94,14 +94,12 @@ int print_num(va_list ptr)
 	{
 		numcpy = num;
 	}
-	while(i <= numcpy)
+	while (i <= numcpy)
 	{
 		i = i * 10;
 	}
-	
 	d = i / 10;
-	
-	while(d >= 1)
+	while (d >= 1)
 	{
 		numprint = numcpy / d;
 		_putchar(numprint + 48);
